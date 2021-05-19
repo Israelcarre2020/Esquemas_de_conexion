@@ -439,6 +439,7 @@ $(document).ready(function () {
         var imgElement9 = 'assets/img/multimetro-clavijas-9.png';
         var imgElement10 = 'assets/img/multimetro-clavijas-10.png';
         var imgElement11 = 'assets/img/multimetro-clavijas-11.png';
+
         fabric.Image.fromURL(imgElement, function(oImg) {
             oImg.left=21;
             oImg.top=113;
@@ -448,32 +449,40 @@ $(document).ready(function () {
             canvas.add(oImg);
 
             oImg.on('mouseup', function() {
-                console.log('selected a circle'); 
-                
-                // $("#modal_multimetro1").modal("show");   
+                console.log('corriente continua');
+                audioCanvas(1);       
+                $("#modal_multimetro1").modal("show");   
 
             });
-            oImg.on('mousemove', function() {
+
+          /*   oImg.on('mousemove', function() {
               audioCanvas(1);
               $("#modal_multimetro1").modal("show");
-            });
+            }); */
         });
+
         fabric.Image.fromURL(imgElement2, function(oImg2) {
             oImg2.left=12;
             oImg2.top=238;
+            
             oImg2.scaleToHeight(105);
             oImg2.scaleToWidth(105);
             oImg2.selectable = false;
             canvas.add(oImg2);
 
             oImg2.on('mouseup', function() {
-                console.log('selected a circle');  
-                
-                            
+                console.log('Prueba de transitores'); 
+                audioCanvas(2);  
+                $("#modal_multimetro2").modal("show");     
+           
             });
-            oImg2.on('mousemove', function() {
+
+ /*            oImg2.on('mousemove', function() {
               $("#modal_multimetro2").modal("show");
-            });
+            }); */
+
+
+
         });
         fabric.Image.fromURL(imgElement3, function(oImg3) {
             oImg3.left=125;
@@ -484,12 +493,12 @@ $(document).ready(function () {
             canvas.add(oImg3);
 
             oImg3.on('mouseup', function() {
-                console.log('selected a circle');  
-                $("#modal_multimetro3").modal("show");            
+              
+                audioCanvas(3);  
+                $("#modal_multimetro3").modal("show");     
+                       
             });
-            oImg3.on('mousemove', function() {
-              //$("#modal_multimetro3").modal("show");      
-            });
+           
         });
         fabric.Image.fromURL(imgElement4, function(oImg4) {
             oImg4.left=158;
@@ -500,12 +509,14 @@ $(document).ready(function () {
             canvas.add(oImg4);
 
             oImg4.on('mouseup', function() {
+                audioCanvas(4);  
+                $("#modal_multimetro4").modal("show");
                 console.log('selected a circle');  
                    
             });
-            oImg4.on('mousemove', function() {
-              //$("#modal_multimetro4").modal("show");         
-            });
+            /* oImg4.on('mousemove', function() {
+              $("#modal_multimetro4").modal("show");         
+            }); */
         });
         fabric.Image.fromURL(imgElement5, function(oImg5) {
             oImg5.left=34;
@@ -516,12 +527,14 @@ $(document).ready(function () {
             canvas.add(oImg5);
 
             oImg5.on('mouseup', function() {
-                console.log('selected a circle');  
+                audioCanvas(5);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro5").modal("show"); 
                             
             });
-            oImg5.on('mousemove', function() {
-              //$("#modal_multimetro5").modal("show");
-            });
+           /*  oImg5.on('mousemove', function() {
+              $("#modal_multimetro5").modal("show");
+            }); */
         });
         fabric.Image.fromURL(imgElement6, function(oImg6) {
             oImg6.left=148;
@@ -532,12 +545,14 @@ $(document).ready(function () {
             canvas.add(oImg6);
 
             oImg6.on('mouseup', function() {
-                console.log('selected a circle');  
+                audioCanvas(6);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro6").modal("show");
                        
             });
-            oImg6.on('mousemove', function() {
-              //$("#modal_multimetro6").modal("show");     
-            });
+            /* oImg6.on('mousemove', function() {
+              $("#modal_multimetro6").modal("show");     
+            }); */
         });
         fabric.Image.fromURL(imgElement7, function(oImg7) {
             oImg7.left=146;
@@ -548,12 +563,14 @@ $(document).ready(function () {
             canvas.add(oImg7);
 
             oImg7.on('mouseup', function() {
-                console.log('selected a circle');  
+                audioCanvas(7);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro7").modal("show");
                       
             });
-            oImg7.on('mousemove', function() {
-              //$("#modal_multimetro7").modal("show");      
-            });
+            /* oImg7.on('mousemove', function() {
+              $("#modal_multimetro7").modal("show");      
+            }); */
         });
         fabric.Image.fromURL(imgElement8, function(oImg8) {
             oImg8.left=148;
@@ -564,12 +581,14 @@ $(document).ready(function () {
             canvas.add(oImg8);
 
             oImg8.on('mouseup', function() {
-                console.log('selected a circle');  
-                $("#modal_multimetro8").modal("show");            
+                audioCanvas(8);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro8").modal("show");
+                          
             });
-            oImg8.on('mousemove', function() {
-              //$("#modal_multimetro8").modal("show");
-            });
+            /* oImg8.on('mousemove', function() {
+              $("#modal_multimetro8").modal("show");
+            }); */
         });
         fabric.Image.fromURL(imgElement9, function(oImg9) {
             oImg9.left=76;
@@ -580,12 +599,14 @@ $(document).ready(function () {
             canvas.add(oImg9);
 
             oImg9.on('mouseup', function() {
-                console.log('selected a circle');  
-                $("#modal_multimetro9").modal("show");            
+                  
+                audioCanvas(9);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro9").modal("show");       
             });
-            oImg9.on('mousemove', function() {
+           /*  oImg9.on('mousemove', function() {
               
-            });
+            }); */
         });
         fabric.Image.fromURL(imgElement10, function(oImg10) {
             oImg10.left=113;
@@ -596,12 +617,13 @@ $(document).ready(function () {
             canvas.add(oImg10);
 
             oImg10.on('mouseup', function() {
-                console.log('selected a circle');  
-                $("#modal_multimetro10").modal("show");            
+                audioCanvas(10);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro10").modal("show");           
             });
-            oImg10.on('mousemove', function() {
+            /* oImg10.on('mousemove', function() {
               console.log('hover a circle');
-            });
+            }); */
         });
         fabric.Image.fromURL(imgElement11, function(oImg11) {
             oImg11.left=96;
@@ -612,12 +634,14 @@ $(document).ready(function () {
             canvas.add(oImg11);
 
             oImg11.on('mouseup', function() {
-                console.log('selected a circle');  
+                audioCanvas(11);  
+                console.log('selected a circle'); 
+                $("#modal_multimetro11").modal("show");
                      
             });
-            oImg11.on('mousemove', function() {
-              //$("#modal_multimetro11").modal("show"); 
-            });
+            /* oImg11.on('mousemove', function() {
+              $("#modal_multimetro11").modal("show"); 
+            }); */
         });
         
 
@@ -686,6 +710,7 @@ $(document).ready(function () {
         fabric.Image.fromURL(imgElement4, function(oImg4) {
             oImg4.left=21;
             oImg4.top=0;
+            
             oImg4.scaleToHeight(30);
             oImg4.scaleToWidth(30);
             oImg4.selectable = false;
