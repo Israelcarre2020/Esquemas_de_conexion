@@ -131,6 +131,8 @@ function controlAudioSlides(numeroSlide) {
            
             break; 
         case 28:
+            $("#quiz-restart-btn").click();
+            $("#quiz-start-btn").click();
             audioActual = new Audio('assets/voz/U007P005133.mp3');
             break;
         case 29:

@@ -852,6 +852,23 @@ a.article:hover {
     
 }
 
+
+.ajusteMundo{
+    margin-top: -190px; 
+    margin-left: 120px;
+}
+
+
+.ajusteMundo2{
+    margin-top: -80px; 
+    margin-left:  400px;
+}
+
+.ajusteMundo3{
+    margin-top: -80px; 
+    margin-left:  400px;
+}
+
 .imagenCircular{
     width: 10rem;
 }
@@ -867,7 +884,24 @@ a.article:hover {
     .imagenCircular2{
         display: none;
     }
+
+    .ajusteMundo{
+        margin-top: 0px; 
+        margin-left: 120px;
+    }
     
+    
+    .ajusteMundo2{
+        padding-bottom: 189px;
+        margin-top: -200px; 
+        margin-left:  0px;
+    }
+    
+    .ajusteMundo3{
+        padding-bottom: 189px;
+        margin-top: -200px; 
+        margin-left:  0px;
+    }
  }
 
 
