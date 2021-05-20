@@ -2,11 +2,11 @@ var correctCards = 0;
 var intentosEmparejamiento = 0;
 
 $(document).ready(function () { 
-    //init();
+    init();
     init2();
 });
 
-/* function init() {
+function init() {
     // Reset the game
     correctCards = 0;
     $('#cardPile').html('');
@@ -32,7 +32,13 @@ $(document).ready(function () {
         $('<p class="btn btn-warning" style="width:85%;">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots').droppable({
             accept: '#cardPile p',
             hoverClass: 'hovered',
-            drop: handleCardDrop
+            drop: handleCardDrop, 
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
         });
     }
 
@@ -64,7 +70,7 @@ function handleCardDrop(event, ui) {
     //If all the cards have been placed correctly then
     //display a message and reset the cards for
     //another go
-    if (correctCards === 4) {
+/*     if (correctCards === 4) {
         Swal.fire({
             title: '¡Buen trabajo!',
             text: 'Has arrastrado correctamente todos los elementos',
@@ -77,8 +83,8 @@ function handleCardDrop(event, ui) {
                 init();
             }
         })
-    }
-} */
+    } */
+}
 
 function init2() {
     // Reset the game
@@ -265,5 +271,50 @@ function validarResultado(){
         }
     }
 }
+
+
+function validarResultado2(){
+
+    var correctCards = $("#cardPile>p.correct").length;
+
+    console.log("correctas: " +correctCards);
+
+    if (correctCards === 4) {
+        Swal.fire({
+            title: '¡Buen trabajo!',
+            text: 'Has arrastrado correctamente todos los elementos',
+            icon: 'success',
+            showDenyButton: true,            
+            confirmButtonText: 'Jugar de nuevo',
+            denyButtonText: 'Terminar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                correctCards = 0;
+           
+               location.reload();
+            
+            }
+        })
+    } else{
+        intentosEmparejamiento++;
+
+        if(intentosEmparejamiento >= 2){
+            Swal.fire(
+                '¡Lo sentimos!',
+                'Deberías revisar nuevamente el contenido relacionado a esta unidad de aprendizaje.',
+                'warning'
+            )
+            $(".emparejamiento_oculto").hide();
+        } else {
+            Swal.fire(
+                '¡Lo sentimos!',
+                'Puedes intentarlo de nuevo',
+                'error'
+            )
+        }
+    }
+}
+
+
 
 
