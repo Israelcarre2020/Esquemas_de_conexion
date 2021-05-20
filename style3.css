@@ -1832,9 +1832,15 @@ picture img {
   margin-left: 0;
 }
 
+.cardSlots3 div:first-child, #cardPile2 p:first-child {
+    margin-left: 0;
+  }
+
 #cardPile2 p {
     border: 2px solid transparent;
 }
+
+
 
 #cardSlots2 div.hovered {
   background: #aaa;
@@ -1846,6 +1852,20 @@ picture img {
     opacity: 0.5;
     margin-top: 15px;
 }
+
+.cardSlots3 div.hovered {
+    background: #aaa;
+  }
+  
+  .cardSlots3 p {
+      border: 2px solid black;
+      border-style: dashed;
+      opacity: 0.5;
+      margin-top: 15px;
+  }
+  
+
+
 
 #cardPile2 p.ui-draggable-dragging {
   -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
