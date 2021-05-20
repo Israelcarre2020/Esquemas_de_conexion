@@ -1114,7 +1114,42 @@ $(document).ready(function () {
     })
 });
 
+
+function EmpalmeData(valor) {
+    
+
+    if(valor == 1){
+        console.log("presionado 1");
+        $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme cola de rata</p><p class="justificado p_black font14">Se emplea cuando los hilos conductores no estarán predispuestos a tensiones elevadas. Generalmente se utiliza las cajas de conexión de salida de los tomacorrientes o interruptores. Al finalizar el empalme en vez de tener cinta aislante debe tener un conector de capuchón.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_rata.png"></img>')
+    }
+
+    if(valor == 2){
+        console.log("presionado 2");
+        $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme Western Unión</p><p class="justificado p_black font14">Se utiliza para tendidos ya que soporta grandes esfuerzos de tensión.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalmeWester.png"></img>')
+    }
+    if(valor == 3){
+        console.log("presionado 3");
+        $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme dúplex</p><p class="justificado p_black font14">Es la combinación de dos empalmes Wester Unión</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_duplex.png"></img>')
+    }
+    if(valor == 4){
+        console.log("presionado 4");
+        $('#tipoEmpalme').html('</img><p class="font-weight-bold">Empalme de cables en «T» o Derivación Simple:</p>Se utiliza para empalmar dos hilos conductores corren sin interrupción.<p class="justificado p_black font14"></p><img  style= "width: 15rem" class="col-md-12" src="assets/img/empalme_t_derivacion_simple.png">')
+    }
+    if(valor == 5){
+        console.log("presionado 5");
+        $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme de cables en «T» o Derivación Múltiple:</p><p class="justificado p_black font14">Este empalme se emplea para realizar uniones entre una punta de un cable de derivación a otro que corre de manera continua.</p><img  style= "width: 15rem"class="col-md-12" src="assets/img/empalme_t_derivacion_multiple.png"></img>')
+    }
+    if(valor == 6){
+        console.log("presionado 6");
+        $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme de Prolongación:</p><p class="justificado p_black font14">Se emplea para uniones de extensión de hilos conductores gruesos.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_prolongacion.png"></img>')
+    }
+    
+}
+
+
+
 $('.card_animada').click(function () {
+
     var numeroTarjeta = $(this).attr("data-numeroTarjeta");
 
     $('#cardFront_' + numeroTarjeta).toggleClass('card-flip');
