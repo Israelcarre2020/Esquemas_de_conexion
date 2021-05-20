@@ -74,7 +74,7 @@
 .selector li input + label:hover { background: #73beff; }
 
 .selector li input:checked + label {
-  background: #5cb85c;
+  background: #a6d6ff;
   color: white;
 }
 
