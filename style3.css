@@ -1294,6 +1294,10 @@ a.article:hover {
     display: block;
 }
 
+.empalmeActivo{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
 
 .answers a {
     background: #dee2e6 !important;

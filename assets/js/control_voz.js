@@ -2,8 +2,126 @@ var audioActivo = true;
 var audioActual = new Audio();
 
 /**
- * por sí en algún momento se necesita saber el slide actual del smart wizard
+ * por sí en algún m
+ * 
+ * omento se necesita saber el slide actual del smart wizard
  */
+
+function modalRed() {
+    $("#modal_red").modal("show");  
+}
+
+ function prueba(valor) {
+
+    $("#quiz-restart-btn").click();
+    $("#quiz-buttons").hide();
+
+
+    if(valor == 0){
+        $('#quiz2').quiz({
+            //resultsScreen: '#results-screen',
+            //counter: false,
+            //homeButton: '#custom-home',
+            nextButtonText: 'Suguiente',
+            counterFormat: 'Pregunta %current de %total',
+            resultsFormat: 'Acertaste %score de %total !',
+            restartButtonText: 'Reintentar',
+            questions: [
+              {
+                'q': ' ¿Este pa?',
+                'options': [
+                  'Primarias y secundarias.',
+                  'Primeras, secundarias y terciarias',
+                  'Descarga y halógena.',
+                  'Ninguna'
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'Buen trabajo, continua.',
+                'incorrectResponse': 'No es la respuesta'
+              },
+              {
+                'q': '<br> ¿Es un ejemplo de luz primaria?',
+                'options': [
+                  'La luna',
+                  'El sol',
+                  'Un espejo',
+                  'Una luciérnaga.'
+                ],
+                'correctIndex': 1,
+                'correctResponse': 'Respuesta Correcta.',
+                'incorrectResponse': 'Sigue Intentanto'
+              },
+              {
+                'q': '<br> La luna es un ejemplo de luz secundaria.',
+                'options': [
+                  'Verdadero',
+                  'Falso'
+                  
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'Excelente!.',
+                'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
+              },
+            ]
+           
+      
+          });
+    }
+
+    if(valor == 1){
+        $('#quiz').quiz({
+            //resultsScreen: '#results-screen',
+            //counter: false,
+            //homeButton: '#custom-home',
+            nextButtonText: 'Suguiente',
+            counterFormat: 'Pregunta %current de %total',
+            resultsFormat: 'Acertaste %score de %total !',
+            restartButtonText: 'Reintentar',
+            questions: [
+              {
+                'q': ' ¿Cuáles son los tipos de fuentes de luz que existen?',
+                'options': [
+                  'Primarias y secundarias.',
+                  'Primeras, secundarias y terciarias',
+                  'Descarga y halógena.',
+                  'Ninguna'
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'Buen trabajo, continua.',
+                'incorrectResponse': 'No es la respuesta'
+              },
+              {
+                'q': '<br> ¿Es un ejemplo de luz primaria?',
+                'options': [
+                  'La luna',
+                  'El sol',
+                  'Un espejo',
+                  'Una luciérnaga.'
+                ],
+                'correctIndex': 1,
+                'correctResponse': 'Respuesta Correcta.',
+                'incorrectResponse': 'Sigue Intentanto'
+              },
+              {
+                'q': '<br> La luna es un ejemplo de luz secundaria.',
+                'options': [
+                  'Verdadero',
+                  'Falso'
+                  
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'Excelente!.',
+                'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
+              },
+            ]
+           
+      
+          });
+    }
+
+    }
+      
+ 
 function onLoadAudio() {
     var stepIndex = $('#smartwizard').smartWizard("getStepIndex");
     controlAudioSlides(stepIndex);
@@ -131,11 +249,12 @@ function controlAudioSlides(numeroSlide) {
            
             break; 
         case 28:
-            $("#quiz-restart-btn").click();
+           $("#quiz-restart-btn").click();
             $("#quiz-start-btn").click();
             audioActual = new Audio('assets/voz/U007P005133.mp3');
             break;
         case 29:
+            $("#quiz-restart-btn").click();
             audioActual = new Audio('assets/voz/U007P005136.mp3');
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades4`).addClass("active_actividad");
@@ -184,12 +303,17 @@ function controlAudioSlides(numeroSlide) {
             audioActual = new Audio('assets/voz/U007P005172.mp3');
             break;
         case 44:
+    
             audioActual = new Audio('assets/voz/U007P005175.mp3');
             break;    
         case 45:
+            //$("#quiz-restart-btn").click();
+            //$("#quiz-start-btn").click();
             audioActual = new Audio('assets/voz/U007P005176.mp3');
             break;
         case 46:
+
+            $("#quiz-start-btn").click();
             audioActual = new Audio('assets/voz/U007P005177.mp3');
             break;                         
         case 47:
@@ -205,6 +329,7 @@ function controlAudioSlides(numeroSlide) {
             // audioActual = new Audio('assets/voz/U007P005177.mp3');
             break; 
         case 51:
+            $('#empalme1').click();
             audioActual = new Audio('assets/voz/U007P005219.mp3');
             break;
         case 52:

@@ -769,9 +769,11 @@ $(document).ready(function () {
 
         
     }
+    
 
     function canvas_tension() {
         var canvas = new fabric.Canvas('c_tension');
+        canvas.hoverCursor = 'pointer';
         var imgElement = 'assets/img/tension1.png';
         var imgElement2 = 'assets/img/tension2.png'; 
         var imgElement3 = 'assets/img/tension3.png'; 
@@ -786,7 +788,8 @@ $(document).ready(function () {
 
             oImg.on('mouseup', function() {
                 console.log('selected a circle'); 
-                $("#modal_multimetro1").modal("show");   
+                $('#tensiones').html('<h6 class="font-weight-bold text-center">Alta tensión:</h6> <p class="p_black justificado">Se dice que un tendido es de alta tensión cuando este maneja tensiones mayores o iguales a 57,5 kV y menores o iguales a 230 kV. <br><br>El cual ayuda a la distribución y transporte de energía eléctrica para extensos trayectos, reduciendo las pérdidas e incrementando la potencia transportada. A continuación, torres utilizadas en alta tensión.</p>')
+               // $("#modal_tension1").modal("show");   
 
             });
             oImg.on('mousemove', function() {
@@ -803,7 +806,9 @@ $(document).ready(function () {
 
             oImg2.on('mouseup', function() {
                 console.log('selected a circle');  
-                $("#modal_multimetro2").modal("show");
+                $('#tensiones').html('<h6 class="font-weight-bold text-center">Baja tensión:</h6> <p class="p_black justificado"></p>Se dice que un tendido es de alta baja cuando este maneja tensión nominal mayor o igual a 25 V y menor o igual a 1000 V.<p class="p_black justificado"></p>Para que un hogar pueda consumir energía eléctrica esta se transforma a baja tensión, la cual es consumida por la gran mayoría de los aparatos eléctricos.<p class="p_black justificado">El tipo de estructura a utilizar para el transporte de energía es:</p><ul><li>Poste de hormigón.</li></ul>')
+
+                //$("#modal_tension1").modal("show");
                             
             });
             oImg2.on('mousemove', function() {
@@ -820,7 +825,7 @@ $(document).ready(function () {
 
             oImg3.on('mouseup', function() {
                 console.log('selected a circle');  
-                $("#modal_electrico2").modal("show");
+                $('#tensiones').html('<h6 class="font-weight-bold text-center">Media tensión:</h6> <p class="p_black justificado">Se dice que un tendido es de media tensión cuando este maneja   tensión nominal superior a 1000 V e inferior a 57,5 kV. Este tipo de tensión se emplea para conducir la energía eléctrica desde las subestaciones hasta las centrales transformadoras que dan suministro a los barrios.</p><p class="p_black justificado">El tipo de estructura a utilizar para el transporte de energía es:</p><ul><li>Poste metálico de celosía.</li><li>Poste de hormigón.</li></ul>')
                             
             });
             oImg3.on('mousemove', function() {
@@ -994,52 +999,112 @@ $(document).ready(function () {
         }
     });
 
+
+
     $('#quiz').quiz({
-      //resultsScreen: '#results-screen',
-      //counter: false,
-      //homeButton: '#custom-home',
-      nextButtonText: 'Suguiente',
-      counterFormat: 'Pregunta %current de %total',
-      resultsFormat: 'Acertaste %score de %total !',
-      restartButtonText: 'Reintentar',
-      questions: [
-        {
-          'q': ' ¿Cuáles son los tipos de fuentes de luz que existen?',
-          'options': [
-            'Primarias y secundarias.',
-            'Primeras, secundarias y terciarias',
-            'Descarga y halógena.',
-            'Ninguna'
-          ],
-          'correctIndex': 0,
-          'correctResponse': 'Buen trabajo, continua.',
-          'incorrectResponse': 'No es la respuesta'
-        },
-        {
-          'q': '<br> ¿Es un ejemplo de luz primaria?',
-          'options': [
-            'La luna',
-            'El sol',
-            'Un espejo',
-            'Una luciérnaga.'
-          ],
-          'correctIndex': 1,
-          'correctResponse': 'Respuesta Correcta.',
-          'incorrectResponse': 'Sigue Intentanto'
-        },
-        {
-          'q': '<br> La luna es un ejemplo de luz secundaria.',
-          'options': [
-            'Verdadero',
-            'Falso'
-            
-          ],
-          'correctIndex': 0,
-          'correctResponse': 'Excelente!.',
-          'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
-        },
-      ]
-    });
+
+        //resultsScreen: '#results-screen',
+        //counter: false,
+        //homeButton: '#custom-home',
+        nextButtonText: 'Suguiente',
+        counterFormat: 'Pregunta %current de %total',
+        resultsFormat: 'Acertaste %score de %total !',
+        restartButtonText: 'Reintentar',
+        questions: [
+          {
+            'q': ' ¿Cuáles son los tipos de fuentes de luz que existen?',
+            'options': [
+              'Primarias y secundarias.',
+              'Primeras, secundarias y terciarias',
+              'Descarga y halógena.',
+              'Ninguna'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Buen trabajo, continua.',
+            'incorrectResponse': 'No es la respuesta'
+          },
+          {
+            'q': '<br> ¿Es un ejemplo de luz primaria?',
+            'options': [
+              'La luna',
+              'El sol',
+              'Un espejo',
+              'Una luciérnaga.'
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Respuesta Correcta.',
+            'incorrectResponse': 'Sigue Intentanto'
+          },
+          {
+            'q': '<br> La luna es un ejemplo de luz secundaria.',
+            'options': [
+              'Verdadero',
+              'Falso'
+              
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Excelente!.',
+            'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
+          },
+        ]
+       
+  
+      });
+
+      $('#quiz2').quiz({
+        //resultsScreen: '#results-screen',
+        //counter: false,
+        //homeButton: '#custom-home',
+        nextButtonText: 'Suguiente',
+        counterFormat: 'Pregunta %current de %total',
+        resultsFormat: 'Acertaste %score de %total !',
+        restartButtonText: 'Reintentar',
+        questions: [
+          {
+            'q': ' ¿La técnica con roldanas se realiza para las instalaciones en ductos subterráneos?',
+            'options': [
+              'Verdadero',
+              'False',
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Buen trabajo, continua.',
+            'incorrectResponse': 'No es la respuesta'
+          },
+          {
+            'q': '<br> ¿En los tendidos eléctricos ¿Qué niveles de tensión existen?',
+            'options': [
+              'Alta y baja tensión',
+              'Alta, media y baja tensión',
+              'Tensión mayor y menor',
+            ],
+            'correctIndex': 1,
+            'correctResponse': 'Respuesta Correcta.',
+            'incorrectResponse': 'Sigue Intentanto'
+          },
+          {
+            'q': '<br> Un tendido eléctrico es de alta tensión porque maneja:',
+            'options': [
+
+              'Tensiones mayores a 57,5 kV y menores o iguales a 230 kV.', 
+              'Tensión nominal superior a 1000 V e inferior a 57,5 kV.', 
+              'Tensión nominal mayor o igual a 25 V y menor o igual a 1000 V.'
+    
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Excelente!.',
+            'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
+          }
+        ]
+       
+  
+      });
+
+
+
+
+
+
+
 
     var wheel = $("#wheel").flipster({
         style: 'wheel',
@@ -1119,27 +1184,64 @@ function EmpalmeData(valor) {
     
 
     if(valor == 1){
+
         console.log("presionado 1");
+        $(`#empalme1`).addClass("empalmeActivo");
+        $(`#empalme2`).removeClass("empalmeActivo");
+        $(`#empalme3`).removeClass("empalmeActivo");
+        $(`#empalme4`).removeClass("empalmeActivo");
+        $(`#empalme5`).removeClass("empalmeActivo");
+        $(`#empalme6`).removeClass("empalmeActivo");
         $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme cola de rata</p><p class="justificado p_black font14">Se emplea cuando los hilos conductores no estarán predispuestos a tensiones elevadas. Generalmente se utiliza las cajas de conexión de salida de los tomacorrientes o interruptores. Al finalizar el empalme en vez de tener cinta aislante debe tener un conector de capuchón.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_rata.png"></img>')
     }
 
     if(valor == 2){
+        $(`#empalme2`).addClass("empalmeActivo");
+        $(`#empalme1`).removeClass("empalmeActivo");
+        $(`#empalme3`).removeClass("empalmeActivo");
+        $(`#empalme4`).removeClass("empalmeActivo");
+        $(`#empalme5`).removeClass("empalmeActivo");
+        $(`#empalme6`).removeClass("empalmeActivo");
         console.log("presionado 2");
         $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme Western Unión</p><p class="justificado p_black font14">Se utiliza para tendidos ya que soporta grandes esfuerzos de tensión.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalmeWester.png"></img>')
     }
     if(valor == 3){
+        $(`#empalme3`).addClass("empalmeActivo");
+        $(`#empalme1`).removeClass("empalmeActivo");
+        $(`#empalme2`).removeClass("empalmeActivo");
+        $(`#empalme4`).removeClass("empalmeActivo");
+        $(`#empalme5`).removeClass("empalmeActivo");
+        $(`#empalme6`).removeClass("empalmeActivo");
         console.log("presionado 3");
         $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme dúplex</p><p class="justificado p_black font14">Es la combinación de dos empalmes Wester Unión</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_duplex.png"></img>')
     }
     if(valor == 4){
+        $(`#empalme4`).addClass("empalmeActivo");
+        $(`#empalme1`).removeClass("empalmeActivo");
+        $(`#empalme2`).removeClass("empalmeActivo");
+        $(`#empalme3`).removeClass("empalmeActivo");
+        $(`#empalme5`).removeClass("empalmeActivo");
+        $(`#empalme6`).removeClass("empalmeActivo");
         console.log("presionado 4");
         $('#tipoEmpalme').html('</img><p class="font-weight-bold">Empalme de cables en «T» o Derivación Simple:</p>Se utiliza para empalmar dos hilos conductores corren sin interrupción.<p class="justificado p_black font14"></p><img  style= "width: 15rem" class="col-md-12" src="assets/img/empalme_t_derivacion_simple.png">')
     }
     if(valor == 5){
+        $(`#empalme5`).addClass("empalmeActivo");
+        $(`#empalme1`).removeClass("empalmeActivo");
+        $(`#empalme2`).removeClass("empalmeActivo");
+        $(`#empalme3`).removeClass("empalmeActivo");
+        $(`#empalme4`).removeClass("empalmeActivo");
+        $(`#empalme6`).removeClass("empalmeActivo");
         console.log("presionado 5");
         $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme de cables en «T» o Derivación Múltiple:</p><p class="justificado p_black font14">Este empalme se emplea para realizar uniones entre una punta de un cable de derivación a otro que corre de manera continua.</p><img  style= "width: 15rem"class="col-md-12" src="assets/img/empalme_t_derivacion_multiple.png"></img>')
     }
     if(valor == 6){
+        $(`#empalme6`).addClass("empalmeActivo");
+        $(`#empalme1`).removeClass("empalmeActivo");
+        $(`#empalme2`).removeClass("empalmeActivo");
+        $(`#empalme3`).removeClass("empalmeActivo");
+        $(`#empalme4`).removeClass("empalmeActivo");
+        $(`#empalme5`).removeClass("empalmeActivo");
         console.log("presionado 6");
         $('#tipoEmpalme').html('<p class="font-weight-bold">Empalme de Prolongación:</p><p class="justificado p_black font14">Se emplea para uniones de extensión de hilos conductores gruesos.</p><img style= "width: 15rem" class="col-md-12" src="assets/img/empalme_prolongacion.png"></img>')
     }

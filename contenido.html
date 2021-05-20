@@ -1874,6 +1874,7 @@
                           <div class="row"> 
                               <div class="col-md-8 offset-md-2">
                                   <div id="quiz">
+                        
                                     <div id="quiz-header">
                                       <h5>Selecciona la respuesta correcta:</h5>
                                     </div>
@@ -2595,10 +2596,8 @@
                             </div>
 
                             <div class="col-md-6"><br><br>
-                              <div style="border-style: dashed;" class="col-md-12 caja-texto"><br>
-                                <h6 class="font-weight-bold text-center">Alta tensión:</h6>
-                                <p class="p_black justificado">Se dice que un tendido es de alta tensión cuando este maneja tensiones mayores o iguales a 57,5 kV y menores o iguales a 230 kV. <br><br>
-                                El cual ayuda a la distribución y transporte de energía eléctrica para extensos trayectos, reduciendo las pérdidas e incrementando la potencia transportada. A continuación, torres utilizadas en alta tensión.</p>
+                              <div id="tensiones" style="border-style: dashed;" class="col-md-12 caja-texto"><br>
+
                               </div>
                               
                             </div>
@@ -2641,14 +2640,14 @@
                             </div> 
                           </div>
                           <div class="row margin-top80">
-                            <div class="col-md-3 caja-texto-p offset-md-1">
+                            <div class="col-md-3 caja-texto-p offset-md-1 margin-top20">
                                 <p class="text-center col-md-12 font-weight-bold ">22.9. Conductores y cables de guarda.</p>
                             </div>
-                            <div style="margin: 0 30px;" class="col-md-3 caja-texto-p">
-                                <p class="text-center col-md-12 font-weight-bold">22.9. Conductores y cables de guarda.</p>
+                            <div style="margin: 0 30px;" class="col-md-3 caja-texto-p margin-top20">
+                                <p class="text-center col-md-12 font-weight-bold">25.7 Conductores, cables de guarda y cables de retención.                                </p>
                             </div>
-                            <div style="margin-right: 60px;"  class="col-md-3 caja-texto-p ">
-                                <p class="text-center col-md-12 font-weight-bold">22.9. Conductores y cables de guarda.</p>
+                            <div style="margin-right: 60px;"  class="col-md-3 caja-texto-p margin-top20">
+                                <p class="text-center col-md-12 font-weight-bold">Artículo 13. Distancias de seguridad.                                </p>
                             </div>
 
                             <div class="col-md-12"><br><br>
@@ -2682,35 +2681,35 @@
                           
                        </div>
                        <div id="unidad7-46" class="tab-pane" role="tabpanel">
-                           <div class="row">
-                                <div class="col" style="display: -webkit-inline-flex;">
-                                    <p class="titulo_aprendizaje">
-                                        <span class="font-weight-bold">
-                                            Ejercicio de aprendizaje
-                                        </span>
-                                    </p>
-                                    <img src="assets/img/aprendizaje.png" alt="Aprendizaje" class="img-fluid" width="50px">
-                                </div>
-                                <div class="row" style="position: absolute; width: 100%; text-align: center;">
-                                    <div class="col">
-                                        <p><span class="font-weight-bold">Opción múltiple</span></p>
-                                    </div>
-                                </div>
-                          </div>
-                          <div class="row"> 
-                              <div class="col-md-8 offset-md-2">
-                                  <div id="quiz">
-                                    <div id="quiz-header">
-                                      <h5>Selecciona la respuesta correcta:</h5>
-                                    </div>
-                                    <div id="quiz-start-screen">
-                                      <p><a href="#" id="quiz-start-btn" class="quiz-button">Iniciar actividad</a></p>
-                                      <img src="assets/img/choice.png" style="width: 30%">
-                                    </div>
-                                  </div>                             
+                       <div class="row">
+                              <div class="col" style="display: -webkit-inline-flex;">
+                                  <p class="titulo_aprendizaje">
+                                      <span class="font-weight-bold">
+                                          Ejercicio de aprendizaje
+                                      </span>
+                                  </p>
+                                  <img src="assets/img/aprendizaje.png" alt="Aprendizaje" class="img-fluid" width="50px">
                               </div>
-                          </div>
-                       </div>
+                              <div class="row" style="position: absolute; width: 100%; text-align: center;">
+                                  <div class="col">
+                                      <p><span class="font-weight-bold">Opción múltiple</span></p>
+                                  </div>
+                              </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-md-8 offset-md-2">
+                                <div id="quiz2">
+                      
+                                  <div id="quiz-header">
+                                    <h5>Selecciona la respuesta correcta:</h5>
+                                  </div>
+                                  <div id="quiz-start-screen">
+                                  
+                                  </div>
+                                </div>                             
+                            </div>
+                        </div> 
+                     </div>
                        <div id="unidad7-47" class="tab-pane" role="tabpanel">
                           <div class="row">
                                 <div class="col-md-5">
@@ -3001,6 +3000,11 @@
                               <img class="col-md-12" src="assets/img/distribucion_energia.png">
                             </div>
                           </div>
+                          <div  class="row" style="display: flex; justify-content: center; margin-top:10px">
+                            <button onclick="modalRed()" class="btn"><p>Estructura de una red eléctrica
+                                
+                                </p><p>Clic para ver</p></button>
+                          </div>
                        </div>
                        <div id="unidad7-50" class="tab-pane" role="tabpanel">
                           <div class="row"> 
@@ -3218,31 +3222,30 @@
                           </div>
                           <div class="row"> 
 
-
                             <div class="col">
                                 <div class="row centerDiv">
-                                    <img class="empalmes" onclick="EmpalmeData(1)"  src="assets/img/calaDeRata.png">
+                                    <img id="empalme1" class="empalmes empalmeActivo"  onclick="EmpalmeData(1)"  src="assets/img/calaDeRata.png">
                                 </div>
                                 <div class="row centerDiv">
-                                    <img  class="empalmes" onclick="EmpalmeData(2)" src="assets/img/wester.png">
+                                    <img id="empalme2"   class="empalmes" onclick="EmpalmeData(2)" src="assets/img/wester.png">
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div class="row centerDiv">
-                                    <img class="empalmes" onclick="EmpalmeData(3)" src="assets/img/duplex.png">
+                                    <img  id="empalme3" class="empalmes" onclick="EmpalmeData(3)" src="assets/img/duplex.png">
                                 </div>
                                 <div class="row centerDiv">
-                                    <img class="empalmes" onclick="EmpalmeData(4)" src="assets/img/derivacionSimple.png">
+                                    <img id="empalme4"  class="empalmes" onclick="EmpalmeData(4)" src="assets/img/derivacionSimple.png">
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div class="row centerDiv">
-                                    <img class="empalmes" onclick="EmpalmeData(5)" src="assets/img/derivacionMultiple.png">
+                                    <img id="empalme5" class="empalmes" onclick="EmpalmeData(5)" src="assets/img/derivacionMultiple.png">
                                 </div>
                                 <div class="row centerDiv">
-                                    <img class="empalmes" onclick="EmpalmeData(6)" src="assets/img/prolongacion.png">
+                                    <img id="empalme6"  class="empalmes" onclick="EmpalmeData(6)" src="assets/img/prolongacion.png">
                                 </div>
                             </div>
 
@@ -3275,8 +3278,8 @@
                                    <canvas id="plano-procedimientos" width="800" height="300"></canvas>                                  
                               </div>
 
-                              <div  id="carouselExampleIndicators98" class="carousel slide">
-                                <div style="margin-left: 50%; margin-top: -230px; " class="carousel-inner">
+                              <div  id="carouselExampleIndicators98"class="carousel slide">
+                                <div style="margin-left: 0%; margin-top: -230px; " class="carousel-inner">
                                   <div  class="carousel-item active">
                                       <div   class="row col-md-3">
                                           <p class="p_black caja-texto-p">1. Se hace supresión de la tensión (para trabajos en línea viva)</p>
@@ -3593,6 +3596,7 @@
                    <a class="nav-link" href="#unidad7-40"> </a>
                </li>
                <li>
+                   
                    <a class="nav-link" href="#unidad7-41"> </a>
                </li>
                <li>
@@ -3760,6 +3764,25 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal_red" tabindex="-1" role="dialog" aria-labelledby="m_interruptor" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" id="m_interruptor">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fas fa-times-circle fa-3x"></i>
+                </span>
+                <div class="modal-body">
+                    <div class="row">
+                
+                            <img class="col-md-12 " src="assets/img/redElectrica.png">
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     
 
 
@@ -3880,6 +3903,29 @@
                             <img class="col-md-6 offset-md-3" src="assets/img/horno-hogar.png">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal_tension1" tabindex="-1" role="dialog" aria-labelledby="m_interruptor" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" id="m_interruptor">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fas fa-times-circle fa-3x"></i>
+                </span>
+                <div class="modal-body">
+                    
+                            <h5 class="text-center">Alta tensión:
+                            </h5>
+                            <p class="p_black font13 justificado">Se dice que un tendido es de alta tensión cuando este maneja tensiones mayores o iguales a 57,5 kV y menores o iguales a 230 kV.
+
+                               <p class="p_black font13 justificado">El cual ayuda a la distribución y transporte de energía eléctrica para extensos trayectos, reduciendo las pérdidas e incrementando la potencia transportada. A continuación, torres utilizadas en alta tensión.</p> 
+                                </p>
+                        
+                       
+                   
                 </div>
             </div>
         </div>
@@ -4361,7 +4407,7 @@
                     <div class="row">
                       <div class="col-md-12">
                          <p class="text-center font-weight-bold">Generación</p>
-                        <p class="p_black text-center">Generación: Esta consiste en la generación de energía eléctrica a través de la transformación de una clase de energía no eléctrica, para este proceso existen centrales eléctricas.</p>
+                        <p class="p_black text-center">Esta consiste en la generación de energía eléctrica a través de la transformación de una clase de energía no eléctrica, para este proceso existen centrales eléctricas.</p>
                       </div>
                         
 
@@ -4373,6 +4419,7 @@
     <div class="modal fade" id="modal_trasmision" tabindex="-1" role="dialog" aria-labelledby="m_interruptor" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered " role="document">
             <div class="modal-content" id="m_interruptor">
+                
                 <span class="mod-close" data-dismiss="modal" aria-hidden="true">
                     <i class="fas fa-times-circle fa-3x"></i>
                 </span>
