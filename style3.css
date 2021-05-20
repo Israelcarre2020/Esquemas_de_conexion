@@ -847,6 +847,30 @@ a.article:hover {
     display: block;
 }
 
+.fondoCables{
+    width: 5rem;
+    
+}
+
+.imagenCircular{
+    width: 10rem;
+}
+.imagenCircular2{
+    width: 10rem;
+}
+
+@media screen and (max-width: 700px) {
+    .fondoCables{
+        display: none;
+        
+    }
+    .imagenCircular2{
+        display: none;
+    }
+    
+ }
+
+
 
 #electricidad{
     background-image: url(assets/img/electricidad.png);

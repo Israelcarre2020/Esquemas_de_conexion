@@ -991,12 +991,14 @@
                           <div class="row">
                             <div class="col-md-12">
                               <h5><b>Cargas eléctricas resistivas cuadro de cargas</b></h5>
-                              <p class="p_black justificado font14">
+                              <p class="p_black justificado font14" style = "padding:10px" >
                                El cuadro de cargas brinda al lector del plano eléctrico, una perspectiva clara, amplia y rápida del circuito de la instalación eléctrica de cualquier estructura física a construir, de igual forma permite conocer a través de este la carga con la cual fue construida el espacio, sean tomas especiales, generales, luminarias y la cantidad conformada en cada circuito, de allí radica la importancia de su elaboración. 
                               </p>
                             </div>
-                            <div class="col-md-12"><br><br>
+                            <div class="col-md-12" style="overflow: auto;" ><br><br>
+                                <div style="overflow: auto">
                               <canvas id="electricidad" width="800" height="600"></canvas>
+                            </div>
 
                               <!-- <img class="col-md-8 offset-md-2" src="assets/img/electricidad.png"> -->
                             </div>
@@ -1008,11 +1010,11 @@
                             <div class="col-md-6">
                               <h5>Cargas eléctricas resistivas cuadro de cargas</h5>
                               <p class="justificado font14 p_black">La siguiente tabla ejemplifica las cargas y circuitos que componen un cuadro de cargas:</p>
-                              <img src="assets/img/tabla_cargas.png">
+                              <img style="width: 22rem;" src="assets/img/tabla_cargas.png">
                             </div>
                             <div class="col-md-6">
                               <p class="justificado font14 p_black">Tomando como ejemplo el cuadro de cargas y sabiendo que se tiene a disposición dos fases, se procede a encontrar la acomodación del circuito así:</p>
-                              <img src="assets/img/operaciones.png"><br>
+                              <img style="width: 22rem;" src="assets/img/operaciones.png"><br>
                               <p class="justificado font14 p_black">De acuerdo a los resultados obtenidos, las fases quedan conformadas por los circuitos de esta manera:</p>
 
                               <div class="col-md-4 offset-md-6">
@@ -1038,7 +1040,7 @@
                                         </div><br>
                                         <div class="row" style="background: #b6e0e1; padding: 10px;">
                                             <div class="col-md-1">
-                                              <img class="col-md-12" src="assets/img/cables.png">
+                                              <img class="col-md-12 fondoCables" src="assets/img/cables.png">
                                             </div>
                                             <div class="col-md-4">
                                               <p class="font-weight-bold"> Por corriente</p>
@@ -1093,7 +1095,7 @@
                                         </div><br>
                                         <div class="row" style="background: #b6e0e1; padding: 10px;">
                                             <div class="col-md-1">
-                                              <img class="col-md-12" src="assets/img/cables.png">
+                                              <img class="col-md-12" style="width: 5rem;" src="assets/img/cables.png">
                                             </div>
                                             <div class="col-md-11">
                                               <p class="font-weight-bold"> Por caída de tensión</p>
@@ -1152,7 +1154,7 @@
                                 </div>
 
                                 <div class="col-md-1">
-                                  <img class="col-md-12" src="assets/img/cables.png">
+                                  <img class="col-md-12 fondoCables" src="assets/img/cables.png">
                                 </div>
 
                                 <div class="col-md-6">
@@ -1176,20 +1178,20 @@
                                   </div>
 
                                   <div class="col-md-12">
-                                    <div class="row">
-                                      <img data-toggle="modal" data-target="#modal_1" onclick="audioPantalla14(1);" class="col-md-2" src="assets/img/b_1.png"><br>
+                                    <div class="row centerDiv">
+                                      <img data-toggle="modal" data-target="#modal_1" onclick="audioPantalla14(1);" class="col-md-2 imagenCircular" src="assets/img/b_1.png"><br>
                                       <p  class="col-md-6" style="margin-left: -15px; margin-top: 20px; background: #ffd97b;">Calcular la carga total.</p>
-                                      <img class="col-md-2" src="assets/img/positivo-modales.png"><br>
+                                      <img class="col-md-2 imagenCircular2"  src="assets/img/positivo-modales.png"><br>
                                     </div>
-                                    <div class="row">
-                                      <img data-toggle="modal" data-target="#modal_2" onclick="audioPantalla14(2);" class="col-md-2" src="assets/img/b_2.png"><br>
+                                    <div class="row centerDiv" >
+                                      <img data-toggle="modal" data-target="#modal_2" onclick="audioPantalla14(2);" class="col-md-2 imagenCircular" src="assets/img/b_2.png"><br>
                                       <p  class="col-md-6" style="margin-left: -15px; margin-top: 20px; background: #ffd97b;">Establecer un factor de demanda</p>
-                                      <img class="col-md-2" src="assets/img/positivo-modales.png"><br>
+                                      <img class="col-md-2 imagenCircular2" src="assets/img/positivo-modales.png"><br>
                                     </div>
-                                    <div class="row">
-                                      <img data-toggle="modal" data-target="#modal_3" onclick="audioPantalla14(3);" class="col-md-2" src="assets/img/b_3.png"><br>
+                                    <div class="row centerDiv">
+                                      <img data-toggle="modal" data-target="#modal_3" onclick="audioPantalla14(3);" class="col-md-2 imagenCircular" src="assets/img/b_3.png"><br>
                                       <p  class="col-md-6" style="margin-left: -15px; margin-top: 20px; background: #ffd97b;">Definir el valor de tensión que va alimentar.</p>
-                                      <img class="col-md-2" src="assets/img/positivo-modales.png"><br>
+                                      <img class="col-md-2 imagenCircular2" src="assets/img/positivo-modales.png"><br>
                                     </div>
                                   </div>
                                 </div>
@@ -1205,7 +1207,7 @@
                             </div>
                             <div class="row" style="background: #fff2cc; padding: 10px;">
                               <div class="col-md-1">
-                                <img class="col-md-12" src="assets/img/cables.png">
+                                <img class="col-md-12 fondoCables" src="assets/img/cables.png">
                               </div>
                               <div class="col-md-11">
                                 <p class="font-weight-bold p_black offset-md-1 col-md-11">Ejemplo de cálculo de una acometida</p><br>
@@ -1219,8 +1221,8 @@
 
                                 <div class="">
                                   <p class="text-center font-weight-bold">Cálculo de acometida</p>
-                                  <div class="row col-md-10">
-                                    <img class="col-md-1" src="assets/img/check.png"><p class="col-md-10 p_black">Aplicarle el factor de demanda según sección 220.82(B).de (Norma técnica Colombiana 2050) </p>
+                                  <div class="row col-md-10 centerDiv">
+                                    <img class="col-md-1" style="width: 5rem"  src="assets/img/check.png"><p class="col-md-10 p_black">Aplicarle el factor de demanda según sección 220.82(B).de (Norma técnica Colombiana 2050) </p>
                                   </div>
 
                                   <table class="col-md-6  table table-bordered table-hover thead-dark">
@@ -1462,15 +1464,15 @@
                                                     <img class="col-md-7" src="assets/img/bombillas.png">
                                                   </div>
                                                   <div class="col-md-3">
-                                                    <img class="col-md-3" src="assets/img/check.png">
+                                                    <img class="col-md-3"  style="width: 5rem;"  src="assets/img/check.png">
                                                     <p class="font14 p_black">La fuente de luz o tipo de lámpara utilizada, sea incandescente, fluorescente, descarga en gas, etc.</p>
                                                   </div>
                                                   <div class="col-md-3">
-                                                    <img class="col-md-3" src="assets/img/check.png">
+                                                    <img class="col-md-3"  style="width: 5rem;"  src="assets/img/check.png">
                                                     <p class="font14 p_black">La luminaria, ya que controla el flujo luminoso emitido por la fuente y en su caso evita o minimiza el deslumbramiento.</p>
                                                   </div>
                                                   <div class="col-md-3">
-                                                    <img class="col-md-3" src="assets/img/check.png">
+                                                    <img class="col-md-3"   style="width: 5rem;" src="assets/img/check.png">
                                                     <p class="font13 p_black">Los sistemas de control y regulación de la luminaria.</p>
                                                   </div>
                                                 </div><hr>
@@ -1523,21 +1525,21 @@
                                                         <div class="row">
                                                           <div class="col-md-12">
 
-                                                            <img class="col-md-1" src="assets/img/check.png">Distribución uniforme de las luminarias.
+                                                            <img class="col-md-1" style="width: 5rem;" src="assets/img/check.png">Distribución uniforme de las luminarias.
 
                                                           </div>
                                                           <div class="col-md-12">
-                                                            <img class="col-md-1" src="assets/img/check.png">Las superficies del local deben ser difusoras y espectralmente neutras.
-
-
-                                                          </div>
-                                                          <div class="col-md-12">
-                                                            <img class="col-md-1" src="assets/img/check.png">El flujo incidente sobre cada superficie debe distribuirse uniformemente.
+                                                            <img class="col-md-1"  style="width: 5rem;"src="assets/img/check.png">Las superficies del local deben ser difusoras y espectralmente neutras.
 
 
                                                           </div>
                                                           <div class="col-md-12">
-                                                            <img class="col-md-1" src="assets/img/check.png">El local debe estar libre de obstrucciones de tamaño considerable.
+                                                            <img class="col-md-1"  style="width: 5rem;"src="assets/img/check.png">El flujo incidente sobre cada superficie debe distribuirse uniformemente.
+
+
+                                                          </div>
+                                                          <div class="col-md-12">
+                                                            <img class="col-md-1"  style="width: 5rem;"src="assets/img/check.png">El local debe estar libre de obstrucciones de tamaño considerable.
 
                                                           </div>
                                                         </div>
@@ -1586,7 +1588,7 @@
                                     <h3 id="msg-final"></h1>
                                     <h3 id="acierto"></h3>
                                     <br>
-                                    <button onclick="inicio()" id="reset" class="btn-cloud btn">Elegir otra pregunta</button>
+                                    <!-- <button onclick="inicio()" id="reset" class="btn-cloud btn">Elegir otra pregunta</button> -->
 
                                     <div class="respuesta-div" style="display: none;">
                                         <p>Respuesta correcta: <span id="res-true"></span></p>
@@ -4174,13 +4176,13 @@
                             <h5 class="text-center">Propiedades de las fuentes y luminarias</h5>
                         </div><br><br>
                         <div class="col-md-4 ">
-                          <p class="col-md-10 p_black"><img class="col-md-4" src="assets/img/check.png">El índice de reproducción del color, lo natural que aparecen los objetos bajo la luz.</p>
+                          <p class="col-md-10 p_black"><img style="width: 5rem;" class="col-md-4" src="assets/img/check.png">El índice de reproducción del color, lo natural que aparecen los objetos bajo la luz.</p>
                         </div>
                         <div class="col-md-4 ">
-                          <p class="col-md-10 p_black"><img class="col-md-4" src="assets/img/check.png">La temperatura del color, la apariencia de calidez o frialdad de la luz.</p>
+                          <p class="col-md-10 p_black"><img  style="width: 5rem;" class="col-md-4" src="assets/img/check.png">La temperatura del color, la apariencia de calidez o frialdad de la luz.</p>
                         </div>
                         <div class="col-md-4 ">
-                          <p class="col-md-10 p_black"><img class="col-md-4" src="assets/img/check.png">El tamaño y forma de la fuente luminosa y de la luminaria.</p>
+                          <p class="col-md-10 p_black"><img  style="width: 5rem;" class="col-md-4" src="assets/img/check.png">El tamaño y forma de la fuente luminosa y de la luminaria.</p>
                         </div>
 
                         <div class="col-md-12 "><br><br>

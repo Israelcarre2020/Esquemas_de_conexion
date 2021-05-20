@@ -648,7 +648,12 @@ $(document).ready(function () {
         
     }
      function canvas_electricidad() {
+
+        
         var canvas = new fabric.Canvas('electricidad');
+        canvas.hoverCursor = 'pointer';
+        
+         
         var imgElement = 'assets/img/modales_cargas_electricas.png';
         var imgElement2 = 'assets/img/modales_cargas_electricas.png'; 
         var imgElement3 = 'assets/img/plus-info.gif'; 
@@ -666,7 +671,7 @@ $(document).ready(function () {
 
             oImg.on('mouseup', function() {
                 console.log('selected a circle'); 
-                $("#modal_multimetro1").modal("show");   
+                $("").modal("show");   
 
             });
             oImg.on('mousemove', function() {
@@ -683,7 +688,7 @@ $(document).ready(function () {
 
             oImg2.on('mouseup', function() {
                 console.log('selected a circle');  
-                $("#modal_multimetro2").modal("show");
+                $("").modal("show");
                             
             });
             oImg2.on('mousemove', function() {
@@ -700,7 +705,7 @@ $(document).ready(function () {
 
             oImg3.on('mouseup', function() {
                 audioPantalla11(1) 
-                $("#modal_electrico2").modal("show"); 
+                $("").modal("show"); 
                             
             });
             oImg3.on('mousemove', function() {
@@ -709,7 +714,7 @@ $(document).ready(function () {
         });
         fabric.Image.fromURL(imgElement4, function(oImg4) {
             oImg4.left=21;
-            oImg4.top=0;
+            oImg4.top=10;
             
             oImg4.scaleToHeight(30);
             oImg4.scaleToWidth(30);
@@ -729,7 +734,7 @@ $(document).ready(function () {
 
         fabric.Image.fromURL(imgElement5, function(oImg5) {
             oImg5.left=0;
-            oImg5.top=170;
+            oImg5.top=140;
             oImg5.scaleToHeight(200);
             oImg5.scaleToWidth(200);
             oImg5.selectable = false;
