@@ -886,6 +886,26 @@ a.article:hover {
 
 @media screen and (max-width: 700px) {
 
+    .fondo1{
+        background-image: none !important;
+    }
+
+    .columnaAisladores{
+        margin: 0 !important;
+    }
+
+
+
+    .columnaAvion{
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .columnaAisladores{
+        margin: 0;
+    }
+
+
     .lumenes{
         width: 25rem;
     }
@@ -1292,6 +1312,33 @@ a.article:hover {
     width: 150px;
     margin: auto auto;
     display: block;
+}
+
+.imagenAiladores{
+    width: 5rem
+}
+
+
+.columnaAisladores{
+    margin-top: 80px; 
+    margin-right: 100px;
+}
+
+.columnaAvion{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.avion{
+width: 300px;
+}
+
+.fondo1{
+    background-image: url(assets/img/aislador_fondo.png);
+    height: 100%;
+    width: 100%;
+
+
 }
 
 .empalmeActivo{
