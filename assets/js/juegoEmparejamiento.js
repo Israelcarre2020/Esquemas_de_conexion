@@ -102,7 +102,7 @@ function init2() {
     // Create the card slots
     var words = ['...', '...', '...', '...', '...'];
     for (var i = 1; i <= words.length; i++) {
-        $('<p class="btn btn-warning" style="width:85%; height: 60px;">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots2').droppable({
+        $('<p class="btn btn-warning" style="width:100%; height: 85px;">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots2').droppable({
             accept: '#cardPile2 p',
             hoverClass: 'hovered',
             drop: handleCardDrop
