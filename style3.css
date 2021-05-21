@@ -2696,9 +2696,9 @@ picture img {
 
 .divcontenido{
     margin-bottom: 100px;
-    overflow: auto;
-    /* height: calc( 100vh - 200px ) !important; */
-    /* overflow-x: hidden !important; */
+    overflow-y: auto !important;
+    height: calc( 100vh - 200px ) !important;
+    overflow-x: hidden !important;
 }
 
 /* Tamaño del scroll */
