@@ -886,6 +886,13 @@ a.article:hover {
 
 @media screen and (max-width: 700px) {
 
+    .ultimaFila{
+        margin-left: 10xp;
+         margin-right: 10px;
+    }
+
+    
+
     .fondo1{
         background-image: none !important;
     }
@@ -2663,6 +2670,29 @@ picture img {
 .margin-buttom15{
     margin-bottom: 15px;
 }
+
+.columnaPost{
+    margin-top: 60px;
+}
+
+.ultimaFila{
+    margin-left: 160px;
+     margin-right: 160px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .ultimaFila{
+        margin-left: 10px;
+         margin-right: 10px;
+    }
+
+    .columnaPost{
+        margin-top: 10px;
+    }
+}
+
 
 .divcontenido{
     margin-bottom: 100px;
