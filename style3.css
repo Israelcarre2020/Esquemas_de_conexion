@@ -8,7 +8,7 @@ body {
     background: #fff;
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 @font-face {
@@ -483,7 +483,7 @@ a.article:hover {
 }
 
 .link-image img{
-    width: 80px; 
+    width: 30px; 
 }
 .link-image2 img{
     width: 80px; 
@@ -1173,7 +1173,7 @@ a.article:hover {
    position: relative;
    opacity: 1;
    padding: 40px 60px;
-   overflow: hidden;
+   overflow: auto;
    transition: all 1s ease;
    top: 0;
 }
