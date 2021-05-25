@@ -884,12 +884,30 @@ a.article:hover {
     width: 10rem;
 }
 
+
+
+
+.ajusteCirculos{
+    width: 60%;
+}
+
+@media screen and (max-width: 700px) {
+    .ajusteCirculos{
+        width:100%;
+    }
+
+}
+
+
+
 @media screen and (max-width: 800px) {
 
     .ultimaFila{
-        margin-left: 10xp;
+        margin-left: 10px;
          margin-right: 10px;
     }
+    
+
 
     
 
