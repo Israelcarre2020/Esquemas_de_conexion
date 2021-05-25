@@ -1,3 +1,43 @@
+var arraytruefalse = [false,false,false];
+
+function goToActivities() {
+    pause_audio();
+    $(".divcontenido").animate({ width: 'hide' }); 
+    $(".menu-actividades").show(1000); 
+    setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
+    $(".controls-slide").hide();
+}
+
+var intentosJuegoFalsoVerdadero = 0;
+
+$('#validarFalsoVerdadero').off('click').on('click', function(){
+    if (arraytruefalse.indexOf(false) != -1) {
+        Swal.fire(
+            '¡Respuesta Invalida!',
+            'Selecciona unicamente lo correcto',
+            'error'
+        )  
+        intentosJuegoFalsoVerdadero++;
+        console.log(intentosJuegoFalsoVerdadero);
+    }else{
+        Swal.fire(
+            '¡Has acertado!',
+            'Continua con la siguiente actividad',
+            'success'
+        )    
+    }
+
+    if (intentosJuegoFalsoVerdadero > 1) {
+        Swal.fire(
+            '¡Has superado el número de intentos!',
+            'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',
+            'warning'
+        )
+        intentosJuegoFalsoVerdadero = 0;
+        goToActivities(); 
+    }  
+});
+
 var numSlide = 54;
 $(document).ready(function () {
     $("#sidebar").mCustomScrollbar({
@@ -330,71 +370,33 @@ $(document).ready(function () {
       check: "assets/img/cb2-0.png",
       onChange: function(i) {
 
-            switch (i[0].name) {
-              case "r1":
-                if (i[0].value==="1") {
-                    Swal.fire(
-                        '¡Buen trabajo!',
-                        'Has acertado',
-                        'success'
-                    )
-                } else {
-                    Swal.fire(
-                        '¡Lo siento!',
-                        'Puedes intentarlo de nuevo',
-                        'error'
-                    )  
-                }
-                break;
-              case "r2":
-                if (i[0].value==="1") {
-                    Swal.fire(
-                        '¡Buen trabajo!',
-                        'Has acertado',
-                        'success'
-                    )
-                } else {
-                    Swal.fire(
-                        '¡Lo siento!',
-                        'Puedes intentarlo de nuevo',
-                        'error'
-                    )  
-                }
-                break;
-              case "r3":
-                if (i[0].value==="1") {
-                    Swal.fire(
-                        '¡Buen trabajo!',
-                        'Has acertado',
-                        'success'
-                    )
-                } else {
-                    Swal.fire(
-                        '¡Lo siento!',
-                        'Puedes intentarlo de nuevo',
-                        'error'
-                    )  
-                }
-                break;
-              case "r4":
-                if (i[0].value==="1") {
-                    Swal.fire(
-                        '¡Buen trabajo!',
-                        'Has acertado',
-                        'success'
-                    )
-                } else {
-                    Swal.fire(
-                        '¡Lo siento!',
-                        'Puedes intentarlo de nuevo',
-                        'error'
-                    )  
-                }
-                break;
-              default:
-                //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
-                break;
-            }
+        switch (i[0].name) {
+            case "r1":
+              if (i[0].value==="1") {
+                  arraytruefalse[0]=true;
+              } else {
+                  arraytruefalse[0]=false;
+              }
+              break;
+            case "r2":
+              if (i[0].value==="1") {
+                  arraytruefalse[1]=true;
+              } else {
+                  arraytruefalse[1]=false;
+              }
+              break;
+            case "r3":
+              if (i[0].value==="1") {
+                  arraytruefalse[2]=true;
+              } else {
+                  arraytruefalse[2]=false;
+              }
+              break;
+          
+            default:
+              //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+              break;
+          }
       },
       onLoad: function(i) {
         // do something

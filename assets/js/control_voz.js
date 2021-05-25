@@ -166,7 +166,7 @@ function controlAudioSlides(numeroSlide) {
             
             break;            
         case 5:
-
+            audioActual = new Audio();
             break;    
         case 6:
             audioActual = new Audio('assets/voz/U007P005019.mp3');
@@ -176,35 +176,35 @@ function controlAudioSlides(numeroSlide) {
             
             break;                                              
         case 8:
-            audioActual = new Audio('assets/voz/U007P005042.mp3');
+            audioActual = new Audio('assets/voz/U007P005043.mp3');
             //$(".comentariosFrecuencia").hide();           
             
             break;            
         case 9:
-             audioActual = new Audio('assets/voz/U007P005043.mp3');
+             audioActual = new Audio('assets/voz/U007P005052.mp3');
             
             break;            
         case 10:
-            audioActual = new Audio('assets/voz/U007P005051.mp3');
+            audioActual = new Audio('assets/voz/U007P005056.mp3');
             
             break;            
         case 11:          
-            audioActual = new Audio('assets/voz/U007P005052.mp3');
-            break;            
-        case 12:
-            audioActual = new Audio('assets/voz/U007P005056.mp3');
-            break;
-        case 13:      
             audioActual = new Audio('assets/voz/U007P005059.mp3');
             break;            
-        case 14:
+        case 12:
             audioActual = new Audio('assets/voz/U007P005073.mp3');
+            break;
+        case 13:      
+            audioActual = new Audio('assets/voz/U007P005079.mp3');
+            break;            
+        case 14:
+            audioActual = new Audio('assets/voz/U007P005080.mp3');
             break;            
         case 15:
-           audioActual = new Audio('assets/voz/U007P005079.mp3');
+           audioActual = new Audio();
             break;               
         case 16:
-            audioActual = new Audio('assets/voz/U007P005080.mp3');
+            audioActual = new Audio();
             break;            
         case 17:
             audioActual = new Audio('assets/voz/U007P005081.mp3');
