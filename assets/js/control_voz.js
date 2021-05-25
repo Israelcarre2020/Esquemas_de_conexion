@@ -11,6 +11,39 @@ function modalRed() {
     $("#modal_red").modal("show");  
 }
 
+function audioRedes(params) {
+
+    switch (params) {
+        case 0:
+            audioActual = new Audio('assets/voz/U007P005198.mp3');
+            break;
+            case 1:
+                audioActual = new Audio('assets/voz/U007P005200.mp3');
+                break;
+          case 2:
+            audioActual = new Audio('assets/voz/U007P005202.mp3');
+            break;
+    
+        default:
+            break;
+    }
+
+    if(!audioActivo) {
+        $("#pauseAudio").hide();
+        $("#resumeAudio").show();
+        return false;
+    } else {
+        $("#resumeAudio").hide();
+        $("#pauseAudio").show();        
+    }
+
+    if(audioActual){
+        audioActual.play();
+    }
+
+    
+}
+
  function prueba(valor) {
 
     $("#quiz-restart-btn").click();
@@ -20,7 +53,7 @@ function modalRed() {
     if(valor == 0){
         $('#quiz2').quiz({
             //resultsScreen: '#results-screen',
-            //counter: false,
+           counter: false,
             //homeButton: '#custom-home',
             nextButtonText: 'Suguiente',
             counterFormat: 'Pregunta %current de %total',
@@ -63,18 +96,16 @@ function modalRed() {
                 'incorrectResponse': 'Profundiza mas en las actidades de aprendizaje'
               },
             ]
-           
-      
           });
     }
 
     if(valor == 1){
         $('#quiz').quiz({
             //resultsScreen: '#results-screen',
-            //counter: false,
+            counter: false,
             //homeButton: '#custom-home',
             nextButtonText: 'Suguiente',
-            counterFormat: 'Pregunta xx %current de %total',
+            counterFormat: 'Pregunta %current de %total',
             resultsFormat: 'Acertaste %score de %total !',
             restartButtonText: 'Reintentar',
             questions: [
@@ -394,37 +425,37 @@ function controlAudioSlides(numeroSlide) {
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades6`).addClass("active_actividad");
             $("#carouselActividadAprendizaje6").carousel(0);
-            audioActual = new Audio();
+          
             break; 
         case 48:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades6`).addClass("active_actividad");
             audioActual = new Audio();
-            // audioActual = new Audio('assets/voz/U007P005177.mp3');
+            audioActual = new Audio('assets/voz/U007P005184.mp3');
             break;
         case 49:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades6`).addClass("active_actividad");
             audioActual = new Audio();
-            // audioActual = new Audio('assets/voz/U007P005177.mp3');
+            audioActual = new Audio('assets/voz/U007P005197.mp3');
             break; 
-        case 51:
+        case 50:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades6`).addClass("active_actividad");
             $('#empalme1').click();
             audioActual = new Audio('assets/voz/U007P005219.mp3');
             break;
-        case 52:
+        case 51:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades6`).addClass("active_actividad");
             audioActual = new Audio('assets/voz/U007P005225.mp3');
             break;  
-            case 53:
+            case 52:
                 $(`.menu_actidades`).removeClass("active_actividad");
                 $(`.menu_actidades6`).addClass("active_actividad");
                 audioActual = new Audio();
                 break;      
-                case 54:
+                case 53:
                     $(`.menu_actidades`).removeClass("active_actividad");
                     $(`.menu_actidades6`).addClass("active_actividad");
                     audioActual = new Audio();

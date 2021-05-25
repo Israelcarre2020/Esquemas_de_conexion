@@ -311,6 +311,7 @@ function validarResultado2(){
                 'Puedes intentarlo de nuevo',
                 'error'
             )
+            init();
         }
     }
 }
