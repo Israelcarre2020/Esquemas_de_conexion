@@ -1006,7 +1006,7 @@ $(document).ready(function () {
     $('#quiz').quiz({
 
         //resultsScreen: '#results-screen',
-        //counter: false,
+        counter: false,
         //homeButton: '#custom-home',
         nextButtonText: 'Suguiente',
         counterFormat: 'Pregunta %current de %total',
@@ -1055,7 +1055,7 @@ $(document).ready(function () {
 
       $('#quiz2').quiz({
         //resultsScreen: '#results-screen',
-        //counter: false,
+       counter: false,
         //homeButton: '#custom-home',
         nextButtonText: 'Suguiente',
         counterFormat: 'Pregunta %current de %total',

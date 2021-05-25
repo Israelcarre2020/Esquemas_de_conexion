@@ -74,7 +74,7 @@ function modalRed() {
             //counter: false,
             //homeButton: '#custom-home',
             nextButtonText: 'Suguiente',
-            counterFormat: 'Pregunta %current de %total',
+            counterFormat: 'Pregunta xx %current de %total',
             resultsFormat: 'Acertaste %score de %total !',
             restartButtonText: 'Reintentar',
             questions: [
