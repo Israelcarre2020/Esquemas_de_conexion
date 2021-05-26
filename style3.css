@@ -8,8 +8,20 @@ body {
     background: #fff;
     margin: 0;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
+
+
+@media screen and (max-width: 800px) {
+    body {
+        font-family: 'Sen', sans-serif;
+        background: #fff;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+    }
+}
+
 
 @font-face {
   font-family: 'Digital';
