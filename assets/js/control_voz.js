@@ -13,6 +13,10 @@ function modalRed() {
 
 function audioRedes(params) {
 
+    if(audioActual)
+    audioActual.pause();
+
+
     switch (params) {
         case 0:
             audioActual = new Audio('assets/voz/U007P005198.mp3');
@@ -185,7 +189,8 @@ function controlAudioSlides(numeroSlide) {
             $(`#tabsAprenderas>div>.tabs>button`).removeClass("active");
             $(`#tabsAprenderas>div>.wrapper_tabcontent>div`).removeClass("active");
             $("#tabUnidad_aprenderas").addClass("active");
-            $(`#unidad_aprenderas`).addClass("active");        
+            $(`#unidad_aprenderas`).addClass("active");   
+                 
 
             
             break;            

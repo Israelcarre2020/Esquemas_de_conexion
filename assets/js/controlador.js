@@ -297,36 +297,43 @@ $(document).ready(function () {
         var stepIndex = parseInt($('#smartwizard').smartWizard("getStepIndex"))+1;
          
         switch (stepIndex) {
+            case 4:
+                pause_audio();
+                $(".divcontenido").animate({ width: 'hide' }); 
+                $(".menu-actividades").show(1000); 
+                setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
+                $(".controls-slide").hide();
+                break;
             case 17:
-                // pause_audio();
+                pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                 break;
             case 22:
-                // pause_audio();
+                pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                 break;
             case 29:
-                // pause_audio();
+                pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                 break;
             case 39:
-                // pause_audio();
+                pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                 break;
             case 47:
-                // pause_audio();
+                pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
