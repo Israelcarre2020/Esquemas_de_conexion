@@ -1,5 +1,7 @@
 var arraytruefalse = [false,false,false];
 
+var arraytruefalse2 = [false,false];
+
 function goToActivities() {
     pause_audio();
     $(".divcontenido").animate({ width: 'hide' }); 
@@ -9,6 +11,7 @@ function goToActivities() {
 }
 
 var intentosJuegoFalsoVerdadero = 0;
+var intentosJuegoFalsoVerdadero2 = 0;
 
 $('#validarFalsoVerdadero').off('click').on('click', function(){
     if (arraytruefalse.indexOf(false) != -1) {
@@ -38,6 +41,35 @@ $('#validarFalsoVerdadero').off('click').on('click', function(){
     }  
 });
 
+
+
+$('#validarFalsoVerdadero2').off('click').on('click', function(){
+    if (arraytruefalse2.indexOf(false) != -1) {
+        Swal.fire(
+            '¡Respuesta Invalida!',
+            'Selecciona unicamente lo correcto',
+            'error'
+        )  
+        intentosJuegoFalsoVerdadero2++;
+        console.log(intentosJuegoFalsoVerdadero2);
+    }else{
+        Swal.fire(
+            '¡Has acertado!',
+            'Continua con la siguiente actividad',
+            'success'
+        )    
+    }
+
+    if (intentosJuegoFalsoVerdadero2 > 1) {
+        Swal.fire(
+            '¡Has superado el número de intentos!',
+            'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',
+            'warning'
+        )
+        intentosJuegoFalsoVerdadero2 = 0;
+        goToActivities(); 
+    }  
+});
 var numSlide = 54;
 $(document).ready(function () {
     $("#sidebar").mCustomScrollbar({
@@ -409,6 +441,41 @@ $(document).ready(function () {
         // do something
       }
     });
+
+    $(".actividadtruefalse2 label").checkbox({
+        checked: "assets/img/cb2-1.png",
+        check: "assets/img/cb2-0.png",
+        onChange: function(i) {
+  
+          switch (i[0].name) {
+              case "r1":
+                if (i[0].value==="1") {
+                    console.log("respuesta correcta 1");
+                    arraytruefalse2[0]=true;
+                } else {
+                    console.log("respuesta incorrecta 1");
+                    arraytruefalse2[0]=false;
+                }
+                break;
+              case "r2":
+                if (i[0].value==="0") {
+                    console.log("respuesta correcta 2");
+                    arraytruefalse2[1]=true;
+                } else {
+                    console.log("respuesta incorrecta 2");
+                    arraytruefalse2[1]=false;
+                }
+                break;
+            
+              default:
+                //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+                break;
+            }
+        },
+        onLoad: function(i) {
+          // do something
+        }
+      });
 
     function canvas_procedimientos() {
         var canvas = new fabric.Canvas('plano-procedimientos');

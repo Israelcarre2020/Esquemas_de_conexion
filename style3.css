@@ -2161,6 +2161,41 @@ picture img {
     background: rgba(255,255,255,0.1);
 }
 
+
+/* ------------------- */
+
+
+.actividadtruefalse2 label{
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.actividadtruefalse2 label > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.actividadtruefalse2 span{
+    color: #fff;
+}
+
+.actividadtruefalse2 img{
+    width: 30px;
+}
+
+.actividadtruefalse2 label:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
+/* ------------------- */
+
+
 .mp10{
     margin: 10px !important;
 }
