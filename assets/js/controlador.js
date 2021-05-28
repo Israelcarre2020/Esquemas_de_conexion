@@ -727,6 +727,7 @@ $(document).ready(function () {
 
         
         var canvas = new fabric.Canvas('electricidad');
+        
         canvas.hoverCursor = 'pointer';
         
          

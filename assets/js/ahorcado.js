@@ -1,7 +1,7 @@
 // ### VARIABLES ###
 
 // Array de palabras
-var palabras = [["FLUJO LUMINOSO", "Para realizar diseños de iluminación se debe tener en cuenta el"]];
+var palabras = [["FLUJOLUMINOSO", "Para realizar diseños de iluminación se debe tener en cuenta el"]];
 // Palabra a averiguar
 var palabra = "";
 // Nº aleatorio
